@@ -1,0 +1,257 @@
+body{
+   font-family:cursive;
+   font-weight: bold;
+    background-color: bisque;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+}
+h1{
+   
+    font-weight: 400;
+}
+
+.player-btns button{
+    
+    font-weight: 200;
+    padding:20px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    background-color: black;
+    width: 200px;
+    font-style: italic;
+    border-radius: 10px;
+    border: none;
+    
+    
+    
+}
+.player-btns button:hover{
+    background-color: transparent;
+    color:rgb(255, 255, 255);
+    transition: 0.3s;
+    box-shadow: 0px 0px 20px 10px rgb(8, 172, 137);
+    text-shadow: 0px 0px 10px rgb(255, 0, 0);
+}
+.player-btns{
+    display: flex;
+    flex-direction: row;
+    gap:2rem;
+    margin-top: 4rem;
+}
+.container{
+    display: flex;
+    padding-top: 100px;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    
+    background-image: url("https://images.unsplash.com/photo-1520052205864-92d242b3a76b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80");
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    
+}
+.game-container{
+    padding: 40px;
+    box-shadow: 0px 0px 20px 10px rgb(238, 0, 255);
+    border-radius: 20px;
+    height: 60%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+
+    
+    
+}
+@keyframes lights {
+    30%{
+        box-shadow:0px 0px 40px 2px rgb(13, 0, 255); 
+    }
+    60%{
+    box-shadow:0px 0px 40px 2px rgb(1, 255, 1); 
+  }
+  90%{
+    box-shadow:0px 0px 40px 2px rgb(255, 0, 0); 
+  }
+}
+.game-container h1{
+   animation-iteration-count: infinite;
+    padding: 20px;
+    animation-name: lights;
+    animation-duration: 0.8s;
+    
+    border-radius: 20px;
+    margin-bottom: 80px;
+}
+
+
+.new{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:absolute;
+    color: white; 
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width:40vw;
+    height: 30vh;
+    background-color: black;
+    border-radius: 30px;
+    gap:10px;
+}
+.new button{
+    padding:20px;
+    font-size: 20px;
+    border-radius: 20px;
+    color:white;
+    font-weight: bold;
+}
+.play-again button{
+    background-color: green;
+    
+}
+.new button:hover{
+    background-color: gray;
+}
+.close button{
+    background-color: red;
+}
+.newgame{
+    display:none
+}  
+
+.score{
+    display:flex;
+    flex-direction: row;
+    gap:2rem;
+    
+}
+
+.pbar div, .ebar div{
+    border:1px solid black;
+    width:40px;
+    height: 10px;
+    transition: 0.8s;
+    
+
+}
+.pbar{
+    box-shadow: 0px 0px 10px 5px rgb(235, 23, 125); ;
+    transform: skew(60deg) rotate(1deg)
+    
+    
+}
+.ebar{
+    box-shadow: 0px 0px 10px 5px rgb(235, 23, 125); ;
+    transform: skew(-60deg) rotate(-1deg)
+}
+.ebar div{
+    background-color: rgb(242, 0, 0); 
+   
+}
+.pbar div{
+    background-color: green;
+}
+.neon{
+    box-shadow:  0px 0px 20px 10px rgb(255, 0, 123);
+    border-radius: 30px;
+    padding:40px;
+}
+.health-container{
+   
+   
+    font-size: 20px;
+    display:flex;
+    gap:15rem;
+   
+}
+
+.computer-health, .player-health{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+.ebar, .pbar{
+    display: flex;
+    flex-direction: row;
+}
+.result2{
+font-size: 20px;
+}
+.result1{
+    text-align: center;
+   
+    
+}
+
+
+
+
+@media (max-width:600px){
+    
+    
+    .container{
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        
+        height: 100vh;
+        background-image: url("https://images.unsplash.com/photo-1546514355-7fdc90ccbd03?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+        background-size:cover;
+        
+    }
+    .game-container h1{
+    font-size: 20px;
+    text-align: center;
+    
+    }
+.game-container h2{
+    font-size: 16px;
+    text-align: center;
+}
+.game-container{
+    padding: 0;
+    width: 90%;
+    
+    margin-top:-80px;
+    
+    
+    box-shadow: none;
+}
+
+.health-container{
+    
+    flex-direction: column;
+    gap:20px;
+    font-size: smaller;
+}
+.player-btns{
+    
+    margin: 0;
+    flex:1;
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+.player-btns button{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 10px;
+    margin-top: 40px;
+    
+    border-radius: 10%;  
+}
+.pbar, .ebar{
+    width: 80%;
+}
+
+}
